@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>make a post</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width:601px)">
+</head>
+
+<body class="background">
+<nav id="Top">
+    <a href= "signup.html">Sign Up</a> 
+</nav>
+<header>
+
+
+    <a href="index.html" style="text-decoration: none;color: white;">
+	<div class="fade"><img src="images/lovecraft.jpeg" alt="lovecraft" width ="200" height="150"/></div>
+    </a>
+
+    <div>
+	That is not dead which can eternal lie, And with strange aeons even death may die.
+    </div>
+</header>
+
+<aside id="Sidebar">
+
+    <form id="Login" onsubmit ="return SignUpForm()" method="post">
+	<table>
+
+	    <tr><td> <input type="text" placeholder="username" name="uname" size="8" /></td></tr>
+	    <tr><td> <input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
+	</table>
+	<p>
+	<input type="Submit" name="Login" value="Login" />
+	<input type="reset" name="Reset" value="Reset" />
+	</p>
+	<p style="font-size:75%">
+	<input type="checkbox" name="rem" /> remember me
+	</p>
+
+	<div class="share"> 
+	    <a href="Post.html" class="share"> Create Post </a>
+	</div>
+    </form>
+</aside>
+
+
+<section>
+
+    <div class="container">
+	<form action="/action_page.php">
+
+	    <div>
+
+		<textarea id="postTitle" placeholder="Title..." style="height:20px;
+		    width:100%"></textarea>
+	    </div>
+	    <textarea id="subject" name="subject" placeholder="Write something.."
+		style="height:200px; width:100%"></textarea>
+
+	    <div style="text-align:left">
+		Attach Image:
+		<input type="file" name="pic" accept="image/*">
+		<input type="submit" value="Submit">
+	    </div>
+	</form>
+
+    </div>
+
+
+</section>
+
+
+<footer>
+    <a href="#Top"> Go back to top</a>
+</footer>
+
+</body>
+</html> 
+
+

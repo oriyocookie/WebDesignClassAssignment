@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Anon1 details</title>
@@ -7,6 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width:601px)">
+
+<script type="text/javascript" src="forms.js"></script>
 </head>
 
 <body class="background">
@@ -26,57 +29,69 @@
 
 <aside id="Sidebar">
 
-    <form id="Login" onsubmit ="return SignUpForm()" method="post">
+    <form id="Login"  method="post" >
 	<table>
 
 	    <tr><td> <input type="text" placeholder="username" name="uname" size="8" /></td></tr>
 	    <tr><td> <input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
-	</table>
-	<p>
-	<input type="Submit" name="Login" value="Login" />
-	<input type="reset" name="Reset" value="Reset" />
-	</p>
-	<p style="font-size:75%">
-	<input type="checkbox" name="rem" /> remember me
-	</p>
+	    <tr>
+		<td>
+		    <p>
+		    <input type="Submit" name="Login" value="Login" />
+		    <input type="reset" name="Reset" value="Reset" />
+		    </p>
+		</td>
+	    </tr>
+	    <tr>
+		<td>
+		    <p style="font-size:75%">
+		    <input type="checkbox" name="rem" /> remember me
+		</td>
+	    </tr>
+	    </p>
 
-	<div class="share"> 
-	    <a href="Post.html" class="share"> Create Post </a>
-	</div>
+	</table>
     </form>
-    </aside>
 
-    <section>
-	<div class="postedBy">
-	    <a href="anon1.html" class="posterInfo"> <img src="images/anonpic.jpg" alt="anon" width="50" height="50"><h1 style="color:green"> Anon1</h1> </a>
-	</div>
-	<table>
+    <div class="share"> 
+	<a href="Post.html" class="share"> Create Post </a>
+    </div>
+</aside>
 
-	    <tr><td></td><td> Real Name: Harry Potter</td></tr>
-	    <tr><td></td><td> Occupation: Wizard </td></tr>      
-	    <tr><td></td><td> About me: This is the page that will be shown when a user clicks
-		    the username of a post author. It should show the details for the selected user, along with an ordered list
-		    of all their posts (in the same format as the List of Posts Page)</td></tr>      
-	</table>
-    </section>
+<section>
+    <div class="postedBy">
+	<a href="anon1.html" class="posterInfo"> <img src="images/anonpic.jpg" alt="anon" width="50" height="50"><h1 style="color:green"> Anon1</h1> </a>
+    </div>
+    <table>
 
-    <section>
-	<div class="secHeader"> <h1> Popular posts</h1> </div>
-		<a href="ctulhuDetails.html" style="text-decoration:none; color:green;">
-		    <img
-		    src="https://vignette.wikia.nocookie.net/lovecraft/images/c/cf/Screenshot_20171018-093500.jpg/revision/latest?cb=20171020174137"
-		    alt="ctulhu" height="50" width="50" style="float:left">
-		    <p style="font-size:140%">Ctulhu</p></a>
-    </section>
+	<tr><td></td><td> Real Name: Harry Potter</td></tr>
+	<tr><td></td><td> Occupation: Wizard </td></tr>      
+	<tr><td></td><td> About me: This is the page that will be shown when a user clicks
+		the username of a post author. It should show the details for the selected user, along with an ordered list
+		of all their posts (in the same format as the List of Posts Page)</td></tr>      
+    </table>
+</section>
+
+<section>
+    <div class="secHeader"> <h1> Popular posts</h1> </div>
+    <a href="ctulhuDetails.html" style="text-decoration:none; color:green;">
+	<img
+	src="https://vignette.wikia.nocookie.net/lovecraft/images/c/cf/Screenshot_20171018-093500.jpg/revision/latest?cb=20171020174137"
+	alt="ctulhu" height="50" width="50" style="float:left">
+	<p style="font-size:140%">Ctulhu</p></a>
+</section>
 
 
 
+<script>
 
-    <footer>
-	<a href="#Top"> Go back to top</a>
-    </footer>
+document.getElementById("Login").addEventListener("submit",LoginForm, false);
+</script>
+<footer>
+    <a href="#Top"> Go back to top</a>
+</footer>
 
-    </body>
-    </html> 
+</body>
+</html> 
 
 

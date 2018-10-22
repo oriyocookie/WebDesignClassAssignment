@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width:601px)">
-
+<script type="text/javascript" src="forms.js"></script>
 
 </head>
 
@@ -25,21 +25,29 @@
 </header>
 <aside id="Sidebar">
 
-    <form id="Login" onsubmit ="return SignUpForm()" method="post" >
+    <form id="Login"  method="post" >
 	<table>
 
 	    <tr><td> <input type="text" placeholder="username" name="uname" size="8" /></td></tr>
 	    <tr><td> <input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
-	</table>
-    </form>
-    <p>
-    <input type="Submit" name="Login" value="Login" />
-    <input type="reset" name="Reset" value="Reset" />
-    </p>
-    <p style="font-size:75%">
-    <input type="checkbox" name="rem" /> remember me
+    <tr>
+    <td>
+        <p>
+        <input type="Submit" name="Login" value="Login" />
+        <input type="reset" name="Reset" value="Reset" />
+        </p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+        <p style="font-size:75%">
+        <input type="checkbox" name="rem" /> remember me
+    </td>
+    </tr>
     </p>
 
+	</table>
+    </form>
     <div class="share"> 
 	<a href="Post.html" class="share"> Create Post </a>
     </div>
@@ -132,6 +140,12 @@
     <div style="text-align:right"> <a href="ctulhuDetails.html" style="color:#FF533D;
 	    text-decoration:none;font-weight:bold">More Details</a> </div>
 </section>
+
+<script>
+
+document.getElementById("Login").addEventListener("submit",LoginForm, false);
+</script>
+
 <footer>
     <a href="#Top"> Go back to top</a>
 </footer>

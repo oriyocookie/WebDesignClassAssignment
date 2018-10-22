@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width:601px)">
+
+<script type="text/javascript" src="forms.js"></script>
 </head>
 
 <body class="background">
@@ -27,44 +29,53 @@
 
 <aside id="Sidebar">
 
-    <form id="Login" onsubmit ="return SignUpForm()" method="post">
+    <form id="Login"  method="post" >
 	<table>
 
 	    <tr><td> <input type="text" placeholder="username" name="uname" size="8" /></td></tr>
 	    <tr><td> <input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
-	</table>
-	<p>
-	<input type="Submit" name="Login" value="Login" />
-	<input type="reset" name="Reset" value="Reset" />
-	</p>
-	<p style="font-size:75%">
-	<input type="checkbox" name="rem" /> remember me
-	</p>
+	    <tr>
+		<td>
+		    <p>
+		    <input type="Submit" name="Login" value="Login" />
+		    <input type="reset" name="Reset" value="Reset" />
+		    </p>
+		</td>
+	    </tr>
+	    <tr>
+		<td>
+		    <p style="font-size:75%">
+		    <input type="checkbox" name="rem" /> remember me
+		</td>
+	    </tr>
+	    </p>
 
-	<div class="share"> 
-	    <a href="Post.html" class="share"> Create Post </a>
-	</div>
+	</table>
     </form>
+
+    <div class="share"> 
+	<a href="Post.html" class="share"> Create Post </a>
+    </div>
 </aside>
 
 
 <section>
 
     <div class="container">
-	<form action="/action_page.php">
+	<form id="Post">
 
 	    <div>
 
 		<textarea id="postTitle" placeholder="Title..." style="height:20px;
 		    width:100%"></textarea>
+		<div id="wordCounter">Title length: 0 Content length: 0</div>
 	    </div>
-	    <textarea id="subject" name="subject" placeholder="Write something.."
+	    <textarea id="postContent" name="postcontent" placeholder="Write something.."
 		style="height:200px; width:100%"></textarea>
-
 	    <div style="text-align:left">
 		Attach Image:
 		<input type="file" name="pic" accept="image/*">
-		<input type="submit" value="Submit">
+		<input id="postButton" type="Button" value="Submit">
 	    </div>
 	</form>
 
@@ -72,7 +83,16 @@
 
 
 </section>
+<section>
+    <div id="testBox">Post goes into here as test</div>
+</section>
 
+<script>
+document.getElementById("Login").addEventListener("submit",LoginForm, false);
+document.getElementById("postButton").addEventListener("click",Post, false);
+document.getElementById("postContent").addEventListener("keyup",wordCountPost, false);
+document.getElementById("postTitle").addEventListener("keyup",wordCountPost, false);
+</script>
 
 <footer>
     <a href="#Top"> Go back to top</a>

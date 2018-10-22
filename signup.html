@@ -7,15 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" type="text/css" href="style.css" media="only screen and (min-width:601px)">
+
+<script type="text/javascript" src="forms.js"></script>
 </head>
+
 
 <body class="background">
 <nav>
     <a href= "signup.html">Sign Up</a> 
 </nav>
-	
-
-
 
 <header>
 
@@ -30,31 +30,42 @@
 
 
 <aside id="Sidebar">
-    <form id="Login" onsubmit ="return SignUpForm()" method="post">
+
+
+    <form id="Login" method="post" >
 	<table>
 
-	    <tr><td><input type="text" placeholder="username" name="uname" size="8" /></td></tr>
-	    <tr><td><input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
-	</table>
-	<p>
-	<input type="Submit" name="Login" value="Login" />
-	<input type="reset" name="Reset" value="Reset" />
-	</p>
-	<p style="font-size:75%">
-	<input type="checkbox" name="rem" /> remember me
-	</p>
+	    <tr><td> <input type="text" placeholder="username" name="uname" size="8" /></td></tr>
+	    <tr><td> <input type="password" placeholder="password" name="pswd" size="8"/></td></tr>      
+	    <tr>
+		<td>
+		    <p>
+		    <input type="Submit" name="Login" value="Login" />
+		    <input type="reset" name="Reset" value="Reset" />
+		    </p>
+		</td>
+	    </tr>
+	    <tr>
+		<td>
+		    <p style="font-size:75%">
+		    <input type="checkbox" name="rem" /> remember me
+		</td>
+	    </tr>
+	    </p>
 
-	<div class="share"> 
-	    <a href="Post.html" class="share"> Create Post </a>
-	</div>
+	</table>
     </form>
+
+    <div class="share"> 
+	<a href="Post.html" class="share"> Create Post </a>
+    </div>
 </aside>
 
 
 <section>
     <h2  style="background-color:white;opacity:0.5;color:black" >Sign Up Page</h2>
-    <form id="SignUp" onsubmit ="return SignUpForm()" method="post"
-        style="background-color:white;opacity:0.5;text-align:center,color:black" >
+    <form id="SignUp" method="post"
+	style="background-color:white;opacity:0.5;text-align:center;color:black" >
         <table style="color:black">
     
     	<tr><td>Name: </td><td> <input type="text" name="name" size="30" placeholder="dont use real name" /></td></tr>
@@ -67,7 +78,7 @@
     
     	<tr>
     	    <td>
-    		<input type="submit" name="SignUp" value="SignUp" />
+    		<input type="submit" name="SignUpButton" value="Sign Up"/>
     		<input type="reset" name="Reset" value="Reset" />
     	    </td>
     	</tr>
@@ -75,6 +86,11 @@
     
     </form>
     
+<script>
+
+document.getElementById("Login").addEventListener("submit",LoginForm, false);
+document.getElementById("SignUp").addEventListener("submit",SignUpForm, false);
+</script>
 </section>
 
 

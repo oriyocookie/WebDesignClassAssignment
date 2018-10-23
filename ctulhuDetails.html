@@ -99,7 +99,8 @@
 	    style="height:100px; width:100%"></textarea>
 	<div id="wordCounter">Comment length: 0 characters</div>
 	<div style="text-align:right">
-	    <input id="toggleComment" type="checkbox" value="Editable" checked> Editable
+	    <span id="toggleEditText"> Edit: On </span>
+	    <input id="toggleComment" type="checkbox" value="Editable" checked> 
 	    <input id="commentButton" type="button" value="Submit">
 	</div>
     </form>
@@ -115,16 +116,8 @@
 
 </div>
 <div id="testReply"></div>
-<script>
 
-    document.getElementById("Login").addEventListener("submit",LoginForm, false);
-
-    document.getElementById("toggleComment").addEventListener("click",toggleEdit, false);
-
-    document.getElementById("commentButton").addEventListener("click",Comment, false);
-
-    document.getElementById("Comment").addEventListener("keyup",wordCountComment, false);
-</script>
+<script type="text/javascript" src="Dom2.js"></script>
 <footer>
     <a href="#Top"> Go back to top</a>
 </footer>

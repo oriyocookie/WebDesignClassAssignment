@@ -201,10 +201,12 @@ function toggleEdit(){
     var check=document.getElementById("toggleComment");
     if (check.checked==true){
 	document.getElementById("Comment").subject.readOnly=false;	
+	document.getElementById("toggleEditText").innerHTML="Edit: On";
     }
     else if(check.checked==false){
 	alert("You must be logged in to comment"); 
 	document.getElementById("Comment").subject.readOnly=true;	
+	document.getElementById("toggleEditText").innerHTML="Edit: Off";
     }
 
 }
